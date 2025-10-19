@@ -1,0 +1,136 @@
+:root {
+  --bg: pink;
+  --panel: #e77ea1;
+  --accent: #be206c;
+  --muted: #f9a2c6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+  background-image: url("../static/pinkbgg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+}
+
+.top-nav {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: rgb(229, 123, 158);
+  padding: 12px 0;       /* makes the bar taller */
+  z-index: 999;          /* keep it above page content */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border-radius: 30px 30px 30px 30px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 300px;    /* reduced gap to bring icons closer */
+  font-size: 60px;
+  color: var(--accent);
+}
+
+.icon {
+  text-decoration: none;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  color: #88123d;
+}
+
+.welcome-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.welcome-box {
+  background-color: rgb(253, 182, 194);
+  color: #bb0e5c;
+  padding: 80px 120px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(107, 9, 40, 0.15);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1250px;
+  max-height: 500px;
+  transition: all 0.3s ease-in-out;
+  margin-top: 80px; 
+}
+
+.welcome-box h1 {
+  font-family: 'Oswald', sans-serif;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  font-size: 80px;
+}
+
+.subtitle {
+  font-family: 'Special Elite', cursive;
+  font-size: 21px;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  gap: 40px;           
+  flex-wrap: nowrap;   
+  max-width: 100%;
+  width: auto;         
+  height: auto;       
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  padding: 16px 50px;
+  border-radius: 50px;
+  font-family: 'Special Elite', cursive;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  font-size: 28px;
+  display: inline-flex;    
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;     
+}
+
+.btn:hover {
+  background: #570221;
+  transform: translateY(-3px);
+}
+

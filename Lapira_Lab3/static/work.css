@@ -1,0 +1,307 @@
+:root {
+  --bg: pink;
+  --panel: #e77ea1;
+  --accent: #be206c;
+  --muted: #f9a2c6;
+}
+
+/* reset / box-sizing to prevent padding from expanding elements beyond viewport */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ensure body doesn't force horizontal scroll from 100vw */
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg);
+  background-image: url("../static/pinkbgg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden; /* optional: hide any tiny overflow */
+}
+
+.top-nav {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: rgb(229, 123, 158);
+  padding: 12px 0;      
+  z-index: 999;         
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border-radius: 30px 30px 30px 30px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 300px;    
+  font-size: 60px;
+  color: var(--accent);
+}
+
+.icon {
+  text-decoration: none;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  color: #88123d;
+}
+
+.work-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+}
+
+.work-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+.work-box {
+  background-color: rgb(253, 182, 194);
+  color: #bb0e5c;
+  padding: 80px 120px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+  height: auto;           /* don't stretch to full parent height */
+  max-width: 1250px;
+  max-height: 500px;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px; 
+}
+
+.work-box h1 {
+  font-size: 90px;
+  color: var(--accent);
+  margin-top: 9px;
+  margin-bottom: 50px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+.page-uppercase .work-box {
+  background-color: rgb(253, 182, 194);
+  color: #bb0e5c;
+  padding: 30px 100px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1250px;
+  max-height: 500px;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px; 
+}
+
+.page-uppercase .work-box h2 {
+  font-size: 60px;
+  color: var(--accent);
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+.page-circle .work-box {
+  background-color: rgb(253, 182, 194);
+  color: #bb0e5c;
+  padding: 30px 100px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1250px;
+  max-height: 500px;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px; 
+}
+
+.page-circle .work-box h2 {
+  font-size: 60px;
+  color: var(--accent);
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+.page-triangle .work-box {
+  background-color: rgb(253, 182, 194);
+  color: #bb0e5c;
+  padding: 30px 100px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1250px;
+  max-height: 480px;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px; 
+}
+
+.page-triangle .work-box h2 {
+  font-size: 60px;
+  color: var(--accent);
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  gap: 40px;           
+  flex-wrap: nowrap;   
+  max-width: 100%;
+  width: auto;         
+  height: auto;       
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  padding: 16px 50px;
+  border-radius: 50px;
+  font-family: 'Special Elite', cursive;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  font-size: 25px;
+  display: inline-flex;    
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;     
+}
+
+.btn:hover {
+  background: #88123d;
+  transform: translateY(-3px);
+}
+
+.uppercase-form {
+  margin-top: 10px;        
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;               
+}
+
+.form-label {
+  font-size: 24px;
+  color: var(--accent);
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--accent);
+  width: 300px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.form-submit {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Oswald', sans-serif;
+  transition: 0.3s;
+}
+
+.form-submit:hover {
+  background-color: #88123d;
+  transform: scale(1.05);
+}
+
+.result-container {
+  padding: 20px;
+  background-color: pink;
+  border-radius: 10px;
+  border: 2px solid var(--accent);
+  max-width: 600px;
+}
+
+.result-text {
+  font-size: 24px;
+  color: var(--accent);
+  margin: 0;
+}
+
+.result-string {
+  color: var(--muted);
+  font-weight: bold;
+}
+
+.page-triangle .works-form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;            /* space between the two input groups */
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;      
+  margin-top: 0px;
+}
+
+.page-triangle .works-form .form-row {
+  display: flex;
+  gap: 90px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.page-triangle .works-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 300px;        
+}
+
+.page-triangle .works-form .form-input {
+  width: 100%;          
+  padding: 8px 10px;
+  font-size: 18px;
+}
+
+.page-triangle .works-form .form-actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.page-triangle .result-container {
+  margin-top: 0px;
+}
