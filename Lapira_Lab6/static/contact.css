@@ -1,0 +1,99 @@
+:root {
+  --bg: pink;
+  --panel: #e77ea1;
+  --accent: #be206c;
+  --muted: #f9a2c6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg);
+  background-image: url("../static/pinkbgg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.top-nav {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: rgb(229, 123, 158);
+  padding: 12px 0;       
+  z-index: 999;         
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border-radius: 30px 30px 30px 30px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 300px;   
+  font-size: 60px;
+  color: var(--accent);
+}
+
+.icon {
+  text-decoration: none;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  color: #88123d;
+}
+
+.contact-box {
+  background-color: rgb(253, 182, 194);
+  color: #bb0e5c;
+  border-radius: 40px;
+  padding: 80px 120px;
+  text-align: left;
+  max-width: 1250px;
+  max-height: 500px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.contact-box h1 {
+  font-size: 60px;
+  color: var(--accent);
+  margin-bottom: 50px;
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+}
+
+.contact-info {
+  text-align: center;
+  width: 100%;
+}
+
+.contact-line {
+  font-size: 20px;
+  color: var(--accent);
+  margin: 10px 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+.contact-name {
+  font-size: 36px;
+  color: var(--accent);
+  margin: 40px 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
