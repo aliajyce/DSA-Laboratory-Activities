@@ -5,14 +5,12 @@
   --muted: #f9a2c6;
 }
 
-/* reset / box-sizing to prevent padding from expanding elements beyond viewport */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ensure body doesn't force horizontal scroll from 100vw */
 body {
   min-height: 100vh;
   width: 100%;
@@ -25,7 +23,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden; /* optional: hide any tiny overflow */
+  overflow-x: hidden; 
 }
 
 .top-nav {
@@ -83,7 +81,7 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   text-align: center;
   width: 100%;
-  height: auto;           /* don't stretch to full parent height */
+  height: auto;          
   max-width: 1250px;
   max-height: 500px;
   transition: all 0.3s ease-in-out;
@@ -268,7 +266,7 @@ body {
 .page-triangle .works-form {
   display: flex;
   flex-direction: row;
-  gap: 10px;            /* space between the two input groups */
+  gap: 10px;           
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;      
@@ -305,3 +303,4 @@ body {
 .page-triangle .result-container {
   margin-top: 0px;
 }
+
