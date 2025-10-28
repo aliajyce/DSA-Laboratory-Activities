@@ -42,15 +42,15 @@ body {
   display: flex;
   justify-content: center;
   background: rgb(229, 123, 158);
-  padding: 12px 0;       /* makes the bar taller */
-  z-index: 999;          /* keep it above page content */
+  padding: 12px 0;       
+  z-index: 999;          
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   border-radius: 30px 30px 30px 30px;
 }
 
 .nav-icons {
   display: flex;
-  gap: 300px;    /* reduced gap to bring icons closer */
+  gap: 300px;   
   font-size: 60px;
   color: var(--accent);
 }
@@ -133,4 +133,5 @@ body {
   background: #570221;
   transform: translateY(-3px);
 }
+
 
