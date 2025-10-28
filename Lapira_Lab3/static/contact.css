@@ -41,7 +41,7 @@ body {
 
 .nav-icons {
   display: flex;
-  gap: 300px;    /* reduced gap to bring icons closer */
+  gap: 300px;   
   font-size: 60px;
   color: var(--accent);
 }

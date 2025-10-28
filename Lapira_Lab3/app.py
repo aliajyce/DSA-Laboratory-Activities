@@ -43,5 +43,64 @@ def area_of_circle():
         result = 3.14159 * radius * radius
     return render_template('areaofCircle.html', result=result)
 
+# infix to postfix
+
+def precedence(op):
+    if op in ('+', '-'):
+        return 1
+    elif op in ('*', '/'):
+        return 2
+    elif op == '^':
+        return 3
+    return 0
+
+
+def infix_to_postfix(expression):
+    ops = []
+    output = []
+
+    for token in expression:
+        if token == ' ':
+            continue  
+
+        if token.isalnum():
+            output.append(token)
+        elif token == '(':
+            ops.append(token)
+        elif token == ')':
+            while ops and ops[-1] != '(':
+                output.append(ops.pop())
+            if ops and ops[-1] == '(':
+                ops.pop()
+            else:
+                return "Mismatched parentheses, Invalid."
+        elif token in '+-*/^':
+            while (ops and ops[-1] != '(' and
+                   ((token != '^' and precedence(ops[-1]) >= precedence(token)) or
+                    (token == '^' and precedence(ops[-1]) > precedence(token)))):
+                output.append(ops.pop())
+            ops.append(token)
+        else:
+            return f"Invalid token: {token}"  
+
+    while ops:
+        if ops[-1] in '()':
+            return "Mismatched parentheses, Invalid."
+        output.append(ops.pop())
+
+    return ''.join(output)
+
+@app.route('/inpostfix', methods=['GET', 'POST'])
+def inpostfix():
+    result = None
+    if request.method == 'POST':
+        expression = request.form.get('inputString', '').strip()
+        if not expression:
+            result = "Please enter a valid expression."
+        else:
+            result = infix_to_postfix(expression)
+    return render_template('inpostfix.html', result=result)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
